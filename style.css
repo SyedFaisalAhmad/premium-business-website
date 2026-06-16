@@ -1,0 +1,733 @@
+/* ===================================
+   GOOGLE FONT
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===================================
+   ROOT VARIABLES
+=================================== */
+
+:root{
+    --primary:#3b82f6;
+    --secondary:#06b6d4;
+    --dark:#0f172a;
+    --dark-light:#111827;
+    --white:#ffffff;
+    --text:#cbd5e1;
+
+    --glass:rgba(255,255,255,0.08);
+    --border:rgba(255,255,255,0.15);
+
+    --shadow:
+    0 8px 32px rgba(0,0,0,0.25);
+
+    --radius:20px;
+    --transition:.35s ease;
+}
+
+/* ===================================
+   RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--dark);
+    color:var(--white);
+    overflow-x:hidden;
+    line-height:1.7;
+}
+
+/* ===================================
+   CUSTOM SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#08101f;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:50px;
+}
+
+/* ===================================
+   GLOBAL
+=================================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+.btn{
+    display:inline-block;
+    padding:15px 32px;
+    border-radius:50px;
+    font-weight:600;
+    transition:var(--transition);
+}
+
+.primary-btn{
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+}
+
+.primary-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:
+    0 10px 25px rgba(59,130,246,.4);
+}
+
+.secondary-btn{
+    border:2px solid var(--primary);
+    color:white;
+}
+
+.secondary-btn:hover{
+    background:var(--primary);
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:999;
+    backdrop-filter:blur(20px);
+    background:rgba(15,23,42,.8);
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 0;
+}
+
+.logo{
+    color:white;
+    font-size:1.6rem;
+    font-weight:700;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+.navbar ul{
+    display:flex;
+    gap:35px;
+}
+
+.navbar a{
+    color:white;
+    transition:var(--transition);
+    font-weight:500;
+}
+
+.navbar a:hover{
+    color:var(--primary);
+}
+
+.menu-btn{
+    display:none;
+    color:white;
+    font-size:1.6rem;
+    cursor:pointer;
+}
+
+/* ===================================
+   HERO
+=================================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:
+    radial-gradient(
+        circle,
+        rgba(59,130,246,.2),
+        transparent
+    );
+    top:-150px;
+    right:-100px;
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-tag{
+    display:inline-block;
+    background:rgba(59,130,246,.15);
+    color:var(--primary);
+    padding:10px 18px;
+    border-radius:50px;
+    margin-bottom:20px;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:var(--text);
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/* ===================================
+   GLASS IMAGE CARD
+=================================== */
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:500px;
+    border-radius:var(--radius);
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(20px);
+
+    background:var(--glass);
+
+    box-shadow:var(--shadow);
+}
+
+/* ===================================
+   TRUSTED SECTION
+=================================== */
+
+.trusted{
+    background:var(--dark-light);
+}
+
+.trusted p{
+    text-align:center;
+    margin-bottom:30px;
+    color:var(--text);
+}
+
+.brands{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.brands span{
+    font-size:1.2rem;
+    font-weight:600;
+    color:#94a3b8;
+}
+
+/* ===================================
+   SECTION TITLE
+=================================== */
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title span{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.section-title h2{
+    font-size:2.8rem;
+    margin-top:10px;
+}
+
+/* ===================================
+   ABOUT SECTION
+=================================== */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image img{
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.about-text h3{
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+.about-text p{
+    color:var(--text);
+    margin-bottom:15px;
+}
+
+.about-text ul{
+    margin-top:20px;
+}
+
+.about-text li{
+    margin-bottom:12px;
+}
+
+.about-text i{
+    color:var(--primary);
+    margin-right:10px;
+}
+/* ===================================
+   SERVICES SECTION
+=================================== */
+
+.services{
+    background:var(--dark-light);
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.service-card{
+    background:var(--glass);
+    border:1px solid var(--border);
+    backdrop-filter:blur(20px);
+    border-radius:var(--radius);
+    padding:35px;
+    text-align:center;
+    transition:var(--transition);
+    box-shadow:var(--shadow);
+}
+
+.service-card:hover{
+    transform:translateY(-12px);
+    border-color:var(--primary);
+}
+
+.service-card i{
+    font-size:2.5rem;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    font-size:1.3rem;
+}
+
+.service-card p{
+    color:var(--text);
+}
+
+/* ===================================
+   PORTFOLIO SECTION
+=================================== */
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:var(--glass);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:35px;
+    transition:var(--transition);
+    position:relative;
+    overflow:hidden;
+}
+
+.project-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+    );
+    transition:.7s;
+}
+
+.project-card:hover::before{
+    left:100%;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+}
+
+.project-card h3{
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+
+.project-card p{
+    color:var(--text);
+}
+
+/* ===================================
+   TESTIMONIALS
+=================================== */
+
+.testimonials{
+    background:var(--dark-light);
+}
+
+.testimonial-card{
+    max-width:800px;
+    margin:auto;
+    background:var(--glass);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:50px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.testimonial-card p{
+    font-size:1.2rem;
+    color:var(--text);
+    margin-bottom:25px;
+}
+
+.testimonial-card h4{
+    color:var(--primary);
+}
+
+/* ===================================
+   CONTACT SECTION
+=================================== */
+
+.contact-form{
+    max-width:800px;
+    margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    background:var(--glass);
+    border:1px solid var(--border);
+    padding:18px;
+    margin-bottom:20px;
+    border-radius:15px;
+    color:white;
+    outline:none;
+    font-family:'Poppins',sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:var(--primary);
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+.contact-form button{
+    border:none;
+    cursor:pointer;
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer{
+    background:#08111f;
+    text-align:center;
+    padding:70px 0 30px;
+}
+
+footer h3{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:var(--text);
+}
+
+.socials{
+    margin:25px 0;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+}
+
+.socials a{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:var(--glass);
+    color:white;
+    transition:var(--transition);
+}
+
+.socials a:hover{
+    background:var(--primary);
+    transform:translateY(-5px);
+}
+
+.copyright{
+    margin-top:20px;
+    font-size:.9rem;
+}
+
+/* ===================================
+   SCROLL ANIMATION EFFECT
+=================================== */
+
+.service-card,
+.project-card,
+.testimonial-card{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media(max-width:991px){
+
+    .hero-content,
+    .about-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero-text h1{
+        font-size:3rem;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .about-text ul{
+        text-align:left;
+        display:inline-block;
+    }
+
+    .hero-image{
+        margin-top:40px;
+    }
+}
+
+@media(max-width:768px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    .navbar{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#0b1325;
+        display:none;
+        padding:25px 0;
+    }
+
+    .navbar.active{
+        display:block;
+    }
+
+    .navbar ul{
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+    }
+
+    .hero-text h1{
+        font-size:2.4rem;
+    }
+
+    .section-title h2{
+        font-size:2rem;
+    }
+
+    .brands{
+        gap:20px;
+    }
+}
+
+@media(max-width:480px){
+
+    section{
+        padding:80px 0;
+    }
+
+    .hero-text h1{
+        font-size:2rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .service-card,
+    .project-card,
+    .testimonial-card{
+        padding:25px;
+    }
+
+    .section-title h2{
+        font-size:1.8rem;
+    }
+}
+
+/* ===================================
+   PREMIUM GLOW EFFECTS
+=================================== */
+
+.hero h1,
+.section-title h2{
+    background:
+    linear-gradient(
+        90deg,
+        #ffffff,
+        #3b82f6
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.primary-btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.primary-btn::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.25),
+        transparent
+    );
+}
+
+.primary-btn:hover::after{
+    left:100%;
+    transition:.8s;
+}
